@@ -1,6 +1,11 @@
 [
 	{
 		"name": "Home",
+		"type": "section"
+	},
+	{
+		"name": "Home",
+		"type": "page",
 		"url": "/index"
 	}
 ]
