@@ -1,0 +1,16 @@
+{
+  "name": "ydoc",
+  "version": "1.0.0",
+  "description": "bla bla bla",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "yeti0904",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "showdown": "^2.1.0"
+  }
+}

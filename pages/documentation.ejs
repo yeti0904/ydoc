@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title><%= pageName %></title>
+		<meta name="og:title" content=<%= pageName %>>
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+
+			body {
+				display: flex;
+				flex-direction: column;
+				height: 100vh;
+				margin: 0px;
+			}
+
+			code {
+				display: block;
+				border-radius: 5px;
+				background-color: darkslategray;
+				color: lightgray;
+				font-family: monospace;
+				width: 100%;
+				padding: 10px;
+			}
+
+			.navbar {
+				width: 100vw;
+				background: #801f11;
+			}
+
+			.sidebar {
+				width: 160px;
+				background: #eb4034;
+				height: 100%;
+			}
+
+			.sidebar a {
+				color: white;
+				font-size: x-large;
+				text-decoration: none;
+			}
+
+			.belowNavbar {
+				display: flex;
+				flex: 1;
+			}
+
+			.navbar,
+			.sidebar,
+			.contents {
+				padding: 8px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="navbar">
+			<h1><%= websiteName %></h1>
+		</div>
+		<div class="belowNavbar">
+			<div class="sidebar">
+				<% for(let i = 0; i < sidebar.length; ++i) { %>
+					<%- `<a href="${sidebar[i].url}">${sidebar[i].name}</a><br>` %>
+				<% } %>
+			</div>
+			<div class="contents">
+				<%- contents %>
+			</div>
+		</div>
+	</body>
+</html>
