@@ -17,6 +17,7 @@ app.get("/favicon.ico", (req, res) => {
 });
 
 app.get("*", (req, res) => {
+	sidebar = require("./sidebar.json");
 	let path = req.originalUrl == "/"? "./docs/index.md" : `./docs/${req.originalUrl}.md`;
 
 	if (!fs.existsSync(path)) {
